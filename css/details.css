@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background: url(../img/details/bg1.png) no-repeat 650px 1150px;
+}
+
+.details .navigation {
+    font-size: 12px;
+    color: orange;
+    clear: both;
+    text-align: left;
+    margin: 10px 20px 50px 20px;
+}
+
+.details .navigation a {
+    text-decoration: none;
+    font-size: 12px;
+    color: orange;
+}
+
+.essay {
+    margin-bottom: 200px;
+}
+
+.details .essay .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.details .essay .author {
+    font-size: 12px;
+    color: rgba(112, 112, 112, 1);
+    margin-bottom: 50px;
+}
+
+.details .essay .content {
+    margin-bottom: 50px;
+}
+
+.details .essay .content p {
+    font-size: 14px;
+    color: rgba(112, 112, 112, 1);
+    text-align: justify;
+    line-height: 1.8;
+    text-indent: 2em;
+}
+
+.essay .contentimg {
+    margin: 40px 40px;
+    position: relative;
+}
+
+.essay .contentimg .bgborder {
+    border: 3px solid rgba(45, 169, 221, 1);
+    width: 660px;
+    height: 371px;
+    position: absolute;
+    left: 125px;
+    top: 20px;
+    z-index: -10;
+}
+
+.essay .contentimg .description {
+    font-size: 10px;
+    color: rgba(112, 112, 112, 1);
+    margin-top: 40px;
+}
+
+.contentimg1 {
+    background: 3px solid rgba(45, 169, 221, 1);
+    border: 3px solid rgba(45, 169, 221, 1);
+    background-clip: content-box;
+}
