@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner {
+    background: url(../img/professionalsettingsdetails/banner.png);
+    height: 754px;
+    position: relative;
+}
+
+.banner .bannertxt {
+    position: absolute;
+    top: 200px;
+    right: 80px;
+}
+
+.banner .bannertxt div {
+    clear: both;
+    float: right;
+}
+
+.banner .bannertxt .txtborder {
+    border-top: 1.5px solid #c7873a;
+    width: 177px;
+}
+
+.banner .bannertxt .txttop {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0199d5;
+    font-family: arial;
+}
+
+.banner .bannertxt .txtbottom {
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: lighter;
+    color: #0199d5;
+    font-family: arial;
+}
+
+.banner .bannerintroduction {
+    width: 200px;
+    height: 150px;
+    background: #c7e6f4;
+}
+
+.banner .bannerintroduction ul {
+    list-style: none;
+}
+
+.banner .bannerintroduction ul li {
+    height: 30px;
+    border-bottom: 1px solid white;
+}
