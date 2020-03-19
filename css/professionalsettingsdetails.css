@@ -9,6 +9,9 @@ body {
     text-align: center;
 }
 
+
+/* banner样式 */
+
 .banner {
     background: url(../img/professionalsettingsdetails/banner.png);
     height: 754px;
@@ -47,9 +50,11 @@ body {
 }
 
 .banner .bannerintroduction {
-    width: 200px;
-    height: 150px;
+    width: 220px;
     background: #c7e6f4;
+    position: absolute;
+    bottom: 180px;
+    right: 50px;
 }
 
 .banner .bannerintroduction ul {
@@ -57,6 +62,262 @@ body {
 }
 
 .banner .bannerintroduction ul li {
-    height: 30px;
-    border-bottom: 1px solid white;
+    line-height: 40px;
+    height: 40px;
+}
+
+.banner .bannerintroduction ul li:first-child {
+    color: #c7883e;
+}
+
+.banner .bannerintroduction .introductionborder {
+    border-top: 1px solid white;
+    width: 90%;
+    display: block;
+    margin-left: 5%;
+}
+
+.banner .bannerintroduction .introductiontxt {
+    clear: both;
+    float: left;
+    margin-left: 12px;
+    text-decoration: none;
+    color: #287594;
+}
+
+.banner .bannerintroduction .introductionright {
+    color: #0199d5;
+    float: right;
+    margin-right: 10px;
+}
+
+
+/* 专业样式 */
+
+.specialty .specialtyimg {
+    margin: 60px 0 40px 0;
+}
+
+.specialty {
+    margin: 0 50px;
+}
+
+.specialty .specialtytarget {
+    margin: 20px 0;
+}
+
+.specialty .specialtytarget .targettitle {
+    color: #0199d5;
+    font-size: 20px;
+    clear: both;
+    float: left;
+    height: 150px;
+    margin-right: 10px;
+}
+
+.specialty .specialtytarget .targettxt {
+    text-align: justify;
+    line-height: 1.8;
+    color: #717171;
+    font-size: 14px;
+}
+
+.specialty .specialtycourse .coursetitle {
+    color: #0199d5;
+    font-size: 20px;
+    clear: both;
+    float: left;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.specialty .specialtycourse {
+    margin: 10px 0;
+}
+
+.specialty .specialtycourse .coulselist {
+    clear: both;
+    display: flex;
+    flex-wrap: row;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.specialty .specialtycourse .coulselist div {
+    width: 88px;
+    height: 126px;
+    background: url(../img/professionalsettingsdetails/book.png);
+}
+
+.specialty .specialtycourse .coulselist div p {
+    width: 90%;
+    display: block;
+    text-align: left;
+    padding-top: 40%;
+    font-weight: 550px;
+    font-size: 17px;
+    overflow: hidden;
+    margin-left: 12.5%;
+}
+
+.certificates {
+    background: url(../img/professionalsettingsdetails/bg1.png)no-repeat 30px 0;
+}
+
+.certificates .certificatestitle {
+    color: #0199d5;
+    font-size: 20px;
+    clear: both;
+    float: left;
+    float: left;
+    margin: 30px 0;
+}
+
+.certificates .certificateslist {
+    clear: both;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+.certificates .certificateslist div {
+    width: 400px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificates .certificateslist span {
+    margin-left: 10px;
+}
+
+
+/* 学生作品展示 */
+
+.worksshow {
+    background: url(../img/professionalsettingsdetails/professionalsettingsdetailsbg.png) no-repeat 0 550px;
+}
+
+.worksshow .worksshowtitleimg {
+    margin: 100px 0;
+}
+
+.worksshow .worksshowlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 200px;
+}
+
+.worksshow .worksshowlist div {
+    position: relative;
+}
+
+.worksshow .worksshowlist .worksshowlistimg {
+    margin: 10px 10px;
+}
+
+.worksshow .worksshowlist .showlistmask {
+    width: 196px;
+    height: 196px;
+    background: #0199d5;
+    display: none;
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.worksshow .worksshowlist .showlistmask p:first-child {
+    font-size: 18px;
+    padding-top: 40%;
+}
+
+.worksshow .worksshowlist .showlistmask p {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.worksshow .worksshowlist div .worksshowlistimg {
+    cursor: pointer;
+}
+
+.worksshow .worksshowlist .worksshowlistimg:hover {
+    display: block;
+}
+
+.worksshow .worksshowlist .worksshowlistimg:hover+.showlistmask {
+    display: block;
+}
+
+
+/* 教学环境展示 */
+
+.environmentshow {
+    margin: 100px 0;
+}
+
+.environmentshow .environmenttitleimg {
+    margin: 50px 0;
+}
+
+.environmentshow .bd .picList .pic a img {
+    margin: 0;
+}
+
+.environmentshow .picScroll .hd ul {
+    display: flex;
+    justify-content: center;
+}
+
+.environmentshow .picScroll .hd ul li {
+    float: left;
+    width: 37px;
+    height: 7px;
+    overflow: hidden;
+    text-indent: -999px;
+    cursor: pointer;
+    margin-right: 10px;
+    background: url("../img/professionalsettingsdetails/line-iteam-b.png") no-repeat;
+}
+
+.environmentshow .picScroll .hd ul li.on {
+    background: url("../img/professionalsettingsdetails/line-iteam-r.png") no-repeat;
+}
+
+.picScroll .bd {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.picScroll .bd ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.picScroll .bd ul li {
+    margin: 0 8px;
+    float: left;
+    _display: inline;
+    text-align: center;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.picScroll .bd ul li .pic img {
+    width: 320px;
+    height: 280px;
+    display: block;
+    padding: 2px;
+}
+
+.picScroll .bd ul li .title {
+    padding: 30px 0;
+}
+
+.picScroll .bd ul li .title a {
+    text-decoration: none;
+    color: #0096D6;
 }
