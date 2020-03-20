@@ -4,202 +4,164 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Content-Language" content="zh-CN">
-    <meta name="Keywords" content="SuperSlide,jQuery图片滚动特效,javascript图片滚动特效">
-    <meta name="Description" content="SuperSlide 致力于解决网站大部分特效展示问题，使网站代码规范整洁，方便维护更新。网站上常用的“焦点图/幻灯片”、“Tab标签切换”、“图片滚动”、“无缝滚动”等等只需要一个SuperSlide即可解决！还可以多个SuperSlide组合创造更多效果">
-    <title>SuperSlide - 图片滚动特效-左</title>
-    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.3.js"></script>
-</head>
-
-<body>
-
-
-
-    <style type="text/css">
-        /* css 重置 */
-        
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <style>
         * {
             margin: 0;
             padding: 0;
-            list-style: none;
         }
         
         body {
-            background: #fff;
-            font: normal 12px/22px 宋体;
-        }
-        
-        img {
-            border: 0;
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        /* 本例子css */
-        
-        .picScroll-left {
-            width: 450px;
-            overflow: hidden;
-            position: relative;
-            border: 1px solid #ccc;
-        }
-        
-        .picScroll-left .hd {
-            overflow: hidden;
-            height: 30px;
-            background: #333;
-            padding: 0 10px;
-        }
-        
-        .picScroll-left .hd .prev,
-        .picScroll-left .hd .next {
-            display: block;
-            width: 5px;
-            height: 9px;
-            float: right;
-            margin-right: 5px;
-            margin-top: 10px;
-            overflow: hidden;
-            cursor: pointer;
-            background: url("images/arrow.png") no-repeat;
-        }
-        
-        .picScroll-left .hd .next {
-            background-position: 0 -50px;
-        }
-        
-        .picScroll-left .hd .prevStop {
-            background-position: -60px 0;
-        }
-        
-        .picScroll-left .hd .nextStop {
-            background-position: -60px -50px;
-        }
-        
-        .picScroll-left .hd ul {
-            float: right;
-            overflow: hidden;
-            zoom: 1;
-            margin-top: 10px;
-            zoom: 1;
-        }
-        
-        .picScroll-left .hd ul li {
-            float: left;
-            width: 9px;
-            height: 9px;
-            overflow: hidden;
-            margin-right: 5px;
-            text-indent: -999px;
-            cursor: pointer;
-            background: url("img/professionalsettingsdetails/line-iteam-b.png") no-repeat;
-        }
-        
-        .picScroll-left .hd ul li.on {
-            background: url("img/professionalsettingsdetails/line-iteam-r.png");
-        }
-        
-        .picScroll-left .bd {
-            padding: 10px;
-        }
-        
-        .picScroll-left .bd ul {
-            overflow: hidden;
-            zoom: 1;
-        }
-        
-        .picScroll-left .bd ul li {
-            margin: 0 8px;
-            float: left;
-            _display: inline;
-            overflow: hidden;
+            width: 1000px;
+            margin: 0 auto;
             text-align: center;
         }
         
-        .picScroll-left .bd ul li .pic {
-            text-align: center;
+        .picscroll .bd {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 100px;
         }
         
-        .picScroll-left .bd ul li .pic img {
-            width: 120px;
-            height: 90px;
-            display: block;
-            padding: 2px;
-            border: 1px solid #ccc;
+        .picscroll .bd .pic {
+            margin: 0 20px;
         }
         
-        .picScroll-left .bd ul li .pic a:hover img {
-            border-color: #999;
+        .picscroll .hd ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
         }
         
-        .picScroll-left .bd ul li .title {
-            line-height: 24px;
+        .picscroll .hd ul li {
+            background: url(/img/professionalsettingsdetails/line-iteam-b.png);
+            width: 37px;
+            height: 7px;
+            list-style: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .picscroll .hd ul .on {
+            background: url(/img/professionalsettingsdetails/line-iteam-r.png);
+            width: 37px;
+            height: 7px;
+            list-style: none;
+            margin-right: 10px;
+            cursor: pointer;
         }
     </style>
+</head>
 
-    <div class="picScroll-left">
-        <div class="hd">
-            <ul></ul>
-        </div>
+<body>
+    <div class="picscroll">
         <div class="bd">
-            <ul class="picList">
-                <li>
-                    <div class="pic">
-                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="images/pic1.jpg" /></a>
-                    </div>
-                    <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图1</a></div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="images/pic2.jpg" /></a>
-                    </div>
-                    <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图2</a></div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="images/pic3.jpg" /></a>
-                    </div>
-                    <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3</a></div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="images/pic1.jpg" /></a>
-                    </div>
-                    <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图1</a></div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="images/pic2.jpg" /></a>
-                    </div>
-                    <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图2</a></div>
-                </li>
-                <li>
-                    <div class="pic">
-                        <a href="http://www.SuperSlide2.com" target="_blank"><img src="images/pic3.jpg" /></a>
-                    </div>
-                    <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3</a></div>
-                </li>
+            <div class="pic">
+                <div>
+                    <img src="/img/professionalsettingsdetails/img-1.jpg">
+                </div>
+                <div class="title">
+                    实训室1
+                </div>
+            </div>
+
+            <div class="pic">
+                <div>
+                    <img src="/img/professionalsettingsdetails/img-2.png">
+                </div>
+                <div class="title">
+                    实训室2
+                </div>
+            </div>
+
+            <div class="pic">
+                <div>
+                    <img src="/img/professionalsettingsdetails/img-3.jpg" id="target">
+                </div>
+                <div class="title">
+                    实训室3
+                </div>
+            </div>
+        </div>
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li class="on"></li>
+                <li></li>
             </ul>
         </div>
     </div>
-
-    <script type="text/javascript">
-        jQuery(".picScroll-left").slide({
-            titCell: ".hd ul",
-            mainCell: ".bd ul",
-            autoPage: true,
-            effect: "left",
-            autoPlay: true,
-            vis: 3,
-            trigger: "click",
-        });
+    <script>
+        var i = 2;
+        var img1 = $(".bd").children("div").eq(0).html();
+        var img2 = $(".bd").eq(1).html();
+        var img3 = $(".bd").eq(2).html();
+        console.log(img1);
+        $(function() {
+            // 定时器
+            var fun1 = setInterval(function() {
+                $(".hd>ul>li").removeClass("on");
+                console.log("auto:" + i);
+                if (i == 3) {
+                    i = 0;
+                }
+                $(".hd>ul>li").eq(i).addClass("on");
+                startLunbo();
+                i++;
+            }, 2000);
+            //鼠标移入横线导航
+            $(".hd>ul>li").mouseenter(function() {
+                    clearTimeout(fun1);
+                })
+                //鼠标移出横线导航
+            $(".hd>ul>li").mouseleave(function() {
+                    fun1 = setInterval(function() {
+                        $(".hd>ul>li").removeClass("on");
+                        console.log("auto:" + i);
+                        if (i == 3) {
+                            i = 0;
+                        }
+                        $(".hd>ul>li").eq(i).addClass("on");
+                        startLunbo();
+                        i++;
+                    }, 2000);
+                })
+                //鼠标移入图片停止轮播
+            $(".picscroll>.bd>.pic").mouseenter(function() {
+                    clearTimeout(fun1);
+                })
+                //鼠标移出图片停止轮播
+            $(".picscroll>.bd>.pic").mouseleave(function() {
+                    fun1 = setInterval(function() {
+                        $(".hd>ul>li").removeClass("on");
+                        console.log("auto:" + i);
+                        if (i == 3) {
+                            i = 0;
+                        }
+                        $(".hd>ul>li").eq(i).addClass("on");
+                        startLunbo();
+                        i++;
+                    }, 2000);
+                })
+                // 自动轮播
+            function startLunbo() {
+                $(".bd>.pic").eq(0).before($(".bd>.pic").eq(1));
+                $(".bd>.pic").eq(1).before($(".bd>.pic").eq(2));
+            };
+            //鼠标点击横线
+            $(".hd>ul>li:first-child").click(function() {
+                $(".bd>.pic").eq(0).before(img3);
+                $(".bd>.pic").eq(1).remove;
+            })
+            $(".hd>ul>li").eq(1).click(function() {
+                alert("aa2");
+            })
+            $(".hd>ul>li:last-child").click(function() {
+                alert("aa");
+            })
+        })
     </script>
 </body>
 
 </html>
-<script type="text/javascript">
-    //百度统计代码
-    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa630f96b6a9dd549675d26373853f7f1' type='text/javascript'%3E%3C/script%3E"));
-</script>

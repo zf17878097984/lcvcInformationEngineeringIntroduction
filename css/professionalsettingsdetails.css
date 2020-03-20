@@ -240,16 +240,12 @@ body {
     color: white;
 }
 
-.worksshow .worksshowlist div .worksshowlistimg {
+.worksshow .worksshowlist div .worksshowlistimg {}
+
+.worksshow .worksshowlist .worksshowlistimg:hover+.showlistmask,
+.showlistmask:hover {
+    display: block;
     cursor: pointer;
-}
-
-.worksshow .worksshowlist .worksshowlistimg:hover {
-    display: block;
-}
-
-.worksshow .worksshowlist .worksshowlistimg:hover+.showlistmask {
-    display: block;
 }
 
 
@@ -295,10 +291,11 @@ body {
 .picScroll .bd ul {
     overflow: hidden;
     zoom: 1;
+    margin-left: -288px !important;
 }
 
 .picScroll .bd ul li {
-    margin: 0 8px;
+    margin: 0 35px;
     float: left;
     _display: inline;
     text-align: center;
@@ -307,7 +304,7 @@ body {
 }
 
 .picScroll .bd ul li .pic img {
-    width: 320px;
+    width: 450px;
     height: 280px;
     display: block;
     padding: 2px;
