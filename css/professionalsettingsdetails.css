@@ -238,14 +238,19 @@ body {
     font-size: 14px;
     text-align: center;
     color: white;
+    display: inline-block;
 }
 
-.worksshow .worksshowlist div .worksshowlistimg {}
+.worksshow .worksshowlist .worksshowlistimg {
+    cursor: pointer;
+}
 
 .worksshow .worksshowlist .worksshowlistimg:hover+.showlistmask,
 .showlistmask:hover {
     display: block;
     cursor: pointer;
+    /* 解决hover闪动 */
+    pointer-events: none
 }
 
 
