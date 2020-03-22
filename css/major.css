@@ -13,40 +13,9 @@ body {
 /* banner样式 */
 
 .banner {
-    background: url(../img/professionalsettingsdetails/banner.png);
+    background: url(../img/major/digitalmediamajorbanner.png);
     height: 754px;
     position: relative;
-}
-
-.banner .bannertxt {
-    position: absolute;
-    top: 200px;
-    right: 80px;
-}
-
-.banner .bannertxt div {
-    clear: both;
-    float: right;
-}
-
-.banner .bannertxt .txtborder {
-    border-top: 1.5px solid #c7873a;
-    width: 177px;
-}
-
-.banner .bannertxt .txttop {
-    font-size: 48px;
-    font-weight: bold;
-    color: #0199d5;
-    font-family: arial;
-}
-
-.banner .bannertxt .txtbottom {
-    margin-top: 10px;
-    font-size: 32px;
-    font-weight: lighter;
-    color: #0199d5;
-    font-family: arial;
 }
 
 .banner .bannerintroduction {
@@ -135,21 +104,20 @@ body {
     margin: 10px 0;
 }
 
-.specialty .specialtycourse .coulselist {
+.specialty .specialtycourse .courselist {
     clear: both;
     display: flex;
-    flex-wrap: row;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-flow: wrap;
 }
 
-.specialty .specialtycourse .coulselist div {
+.specialty .specialtycourse .courselist div {
     width: 88px;
     height: 126px;
-    background: url(../img/professionalsettingsdetails/book.png);
+    margin: 30px;
+    background: url(../img/major/book.png);
 }
 
-.specialty .specialtycourse .coulselist div p {
+.specialty .specialtycourse .courselist div p {
     width: 90%;
     display: block;
     text-align: left;
@@ -161,7 +129,7 @@ body {
 }
 
 .certificates {
-    background: url(../img/professionalsettingsdetails/bg1.png)no-repeat 30px 0;
+    background: url(../img/major/bg1.png)no-repeat 30px 0;
 }
 
 .certificates .certificatestitle {
@@ -196,7 +164,7 @@ body {
 /* 学生作品展示 */
 
 .worksshow {
-    background: url(../img/professionalsettingsdetails/professionalsettingsdetailsbg.png) no-repeat 0 550px;
+    background: url(../img/major/majordetailsbg.png) no-repeat 0 550px;
 }
 
 .worksshow .worksshowtitleimg {
@@ -261,65 +229,10 @@ body {
 }
 
 .environmentshow .environmenttitleimg {
-    margin: 50px 0;
+    margin: 80px 0;
 }
 
-.environmentshow .bd .picList .pic a img {
-    margin: 0;
-}
-
-.environmentshow .picScroll .hd ul {
+.environmentshow .environmentimg {
     display: flex;
-    justify-content: center;
-}
-
-.environmentshow .picScroll .hd ul li {
-    float: left;
-    width: 37px;
-    height: 7px;
-    overflow: hidden;
-    text-indent: -999px;
-    cursor: pointer;
-    margin-right: 10px;
-    background: url("../img/professionalsettingsdetails/line-iteam-b.png") no-repeat;
-}
-
-.environmentshow .picScroll .hd ul li.on {
-    background: url("../img/professionalsettingsdetails/line-iteam-r.png") no-repeat;
-}
-
-.picScroll .bd {
-    padding: 10px;
-    overflow: hidden;
-}
-
-.picScroll .bd ul {
-    overflow: hidden;
-    zoom: 1;
-    margin-left: -288px !important;
-}
-
-.picScroll .bd ul li {
-    margin: 0 35px;
-    float: left;
-    _display: inline;
-    text-align: center;
-    list-style: none;
-    overflow-x: hidden;
-}
-
-.picScroll .bd ul li .pic img {
-    width: 450px;
-    height: 280px;
-    display: block;
-    padding: 2px;
-}
-
-.picScroll .bd ul li .title {
-    padding: 30px 0;
-}
-
-.picScroll .bd ul li .title a {
-    text-decoration: none;
-    color: #0096D6;
+    justify-content: space-around;
 }
